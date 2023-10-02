@@ -68,6 +68,7 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.5)
       public_suffix (>= 2.0.2, < 6.0)
+    amazing_print (1.5.0)
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
@@ -87,6 +88,8 @@ GEM
     debug (1.8.0)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
+    digest-crc (0.6.5)
+      rake (>= 12.0.0, < 14.0.0)
     erubi (1.12.0)
     ffi (1.16.2)
     globalid (1.2.1)
@@ -180,6 +183,10 @@ GEM
     rails-html-sanitizer (1.6.0)
       loofah (~> 2.21)
       nokogiri (~> 1.14)
+    rails_semantic_logger (4.12.0)
+      rack
+      railties (>= 5.1)
+      semantic_logger (~> 4.13)
     railties (7.0.8)
       actionpack (= 7.0.8)
       activesupport (= 7.0.8)
@@ -197,11 +204,15 @@ GEM
     rexml (3.2.6)
     roda (3.72.0)
       rack
+    ruby-kafka (1.5.0)
+      digest-crc
     rubyzip (2.3.2)
     selenium-webdriver (4.13.1)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    semantic_logger (4.14.0)
+      concurrent-ruby (~> 1.0)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -244,6 +255,7 @@ PLATFORMS
   arm64-darwin-22
 
 DEPENDENCIES
+  amazing_print
   bootsnap
   capybara
   debug
@@ -253,7 +265,9 @@ DEPENDENCIES
   karafka-web
   puma (~> 5.0)
   rails (~> 7.0.8)
+  rails_semantic_logger
   redis (~> 4.0)
+  ruby-kafka
   selenium-webdriver
   sprockets-rails
   sqlite3 (~> 1.4)

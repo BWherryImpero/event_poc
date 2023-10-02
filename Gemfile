@@ -52,6 +52,11 @@ gem "bootsnap", require: false
 gem "karafka", ">= 2.2.0"
 gem "karafka-web"
 
+# Better logging
+gem "amazing_print"
+gem "rails_semantic_logger"
+gem "ruby-kafka"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
