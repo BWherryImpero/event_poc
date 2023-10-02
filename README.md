@@ -14,9 +14,17 @@ CAVEAT: This is my first time using this, and I am not an expert in configuring 
 
 Attempting to use the simplest possible Rails application I can. Where I'm doing something that isn't "out of the box" Rails, I'll note it below:
 
+### [Karafka](https://karafka.io/)
+
+Best way I currently know to attach a Rails app to Kafka. Not really using it for anything right now, though.
+
 ### [Litestack](https://github.com/oldmoe/litestack)
 
 Decided to remove having an external database as just another cog in the machine that adds complexity. For this POC, I'm just leaning on SQLite, even in the production environment. This also allows me to commit the DB to source control, so we don't need to worry about migrating/seeding, etc.
+
+### [Semantic Logger](https://logger.rocketjob.io/index.html)
+
+We're using Semantic Logger in the Backdrop stack. I just added in a [Kafka appender](https://logger.rocketjob.io/appenders.html#apache-kafka).
 
 # Setup
 
